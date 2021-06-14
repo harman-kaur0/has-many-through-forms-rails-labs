@@ -1,1 +1,9 @@
+<h1><%= @user.username %></h1>
+<h4>Email: <%= @user.email %></h4>
 
+<h4>POSTS</h4>
+<ul>
+    <% @user.posts.each do |p| %>
+        <li><%= link_to p.title, p  %></li>
+    <% end %>
+</ul>
